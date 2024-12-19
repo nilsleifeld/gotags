@@ -4,7 +4,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/nilsleifeld/gotags/h"
+	. "github.com/nilsleifeld/gotags/h"
 )
 
 func main() {
@@ -14,17 +14,20 @@ func main() {
 	}
 }
 
-func page() *h.Element {
-	return h.Html(nil,
-		h.Head(nil),
-		h.Body(nil,
-			h.Main(
-				h.Attrs(
-					h.Id("app"),
-					h.Class("container"),
-				),
-				h.H1(nil, h.Text("Hello, world!")),
-			),
+func page() HTML {
+	todos := []string{"Buy milk", "Walk the dog", "Learn Go"}
+
+	return Html().Lang("de").Child(
+		Head().Child(Meta().Charset("utf-8")),
+		Body().Child(
+			Main().
+				Child(If(true, H1(Text("Todo")))).
+				Children(ForEach(todos, func(todo string) HTML {
+					return Div().Child(Text(todo))
+				})).
+				Children(ForEach(todos, func(todo string) HTML {
+					return Div().Child(Text(todo))
+				})),
 		),
 	)
 }
@@ -33,6 +36,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 
-	html := h.Render(page())
+	html := Render(page())
 	io.WriteString(w, html)
 }
