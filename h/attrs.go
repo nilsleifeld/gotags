@@ -254,3 +254,8 @@ func (t *TagBuilder) Content(value string) *TagBuilder {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("content", value))
 	return t
 }
+
+func (t *TagBuilder) Slot(value string) *TagBuilder {
+	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("slot", value))
+	return t
+}
