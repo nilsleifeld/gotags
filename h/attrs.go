@@ -249,3 +249,8 @@ func (t *TagBuilder) Inputmode(value string) *TagBuilder {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("inputmode", value))
 	return t
 }
+
+func (t *TagBuilder) Content(value string) *TagBuilder {
+	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("content", value))
+	return t
+}
