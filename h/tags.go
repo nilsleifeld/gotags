@@ -17,11 +17,11 @@ func Main(children ...HTML) *DefaultTagBuilder {
 }
 
 func Input() *DefaultTagBuilder {
-	return NewDefaultTagBuilder("main")
+	return NewDefaultTagBuilder("input")
 }
 
 func Portal() *DefaultTagBuilder {
-	return NewDefaultTagBuilder("main")
+	return NewDefaultTagBuilder("poral")
 }
 
 func Meta() *DefaultTagBuilder {
