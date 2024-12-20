@@ -1,475 +1,475 @@
 package h
 
-func Html(children ...HTML) *TagBuilder {
-	return NewTagBuilder("html", children...)
+func Html(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("html", children...)
 }
 
-func Head(children ...HTML) *TagBuilder {
-	return NewTagBuilder("head", children...)
+func Head(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("head", children...)
 }
 
-func Body(children ...HTML) *TagBuilder {
-	return NewTagBuilder("body", children...)
+func Body(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("body", children...)
 }
 
-func Main(children ...HTML) *TagBuilder {
-	return NewTagBuilder("main", children...)
+func Main(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("main", children...)
 }
 
-func Input() *TagBuilder {
-	return NewTagBuilder("main")
+func Input() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("main")
 }
 
-func Portal() *TagBuilder {
-	return NewTagBuilder("main")
+func Portal() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("main")
 }
 
-func Meta() *TagBuilder {
-	return NewTagBuilder("meta").
+func Meta() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("meta").
 		SetSelfClosing()
 }
 
-func Button(children ...HTML) *TagBuilder {
-	return NewTagBuilder("button", children...)
+func Button(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("button", children...)
 }
 
-func Div(children ...HTML) *TagBuilder {
-	return NewTagBuilder("div", children...)
+func Div(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("div", children...)
 }
 
-func Base() *TagBuilder {
-	return NewTagBuilder("base").
+func Base() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("base").
 		SetSelfClosing()
 }
 
-func Link() *TagBuilder {
-	return NewTagBuilder("link").
+func Link() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("link").
 		SetSelfClosing()
 }
 
-func Style(children ...HTML) *TagBuilder {
-	return NewTagBuilder("style", children...)
+func Style(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("style", children...)
 }
 
-func Title(children ...HTML) *TagBuilder {
-	return NewTagBuilder("title", children...)
+func Title(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("title", children...)
 }
 
-func A(children ...HTML) *TagBuilder {
-	return NewTagBuilder("a", children...)
+func A(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("a", children...)
 }
 
-func Address(children ...HTML) *TagBuilder {
-	return NewTagBuilder("address", children...)
+func Address(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("address", children...)
 }
 
-func Article(children ...HTML) *TagBuilder {
-	return NewTagBuilder("article", children...)
+func Article(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("article", children...)
 }
 
-func Aside(children ...HTML) *TagBuilder {
-	return NewTagBuilder("aside", children...)
+func Aside(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("aside", children...)
 }
 
-func Footer(children ...HTML) *TagBuilder {
-	return NewTagBuilder("footer", children...)
+func Footer(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("footer", children...)
 }
 
-func Header(children ...HTML) *TagBuilder {
-	return NewTagBuilder("header", children...)
+func Header(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("header", children...)
 }
 
-func H1(children ...HTML) *TagBuilder {
-	return NewTagBuilder("h1", children...)
+func H1(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("h1", children...)
 }
 
-func H2(children ...HTML) *TagBuilder {
-	return NewTagBuilder("h2", children...)
+func H2(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("h2", children...)
 }
 
-func H3(children ...HTML) *TagBuilder {
-	return NewTagBuilder("h3", children...)
+func H3(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("h3", children...)
 }
 
-func H4(children ...HTML) *TagBuilder {
-	return NewTagBuilder("h4", children...)
+func H4(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("h4", children...)
 }
 
-func H5(children ...HTML) *TagBuilder {
-	return NewTagBuilder("h5", children...)
+func H5(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("h5", children...)
 }
 
-func H6(children ...HTML) *TagBuilder {
-	return NewTagBuilder("h6", children...)
+func H6(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("h6", children...)
 }
 
-func HGroup(children ...HTML) *TagBuilder {
-	return NewTagBuilder("hgroup", children...)
+func HGroup(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("hgroup", children...)
 }
 
-func Nav(children ...HTML) *TagBuilder {
-	return NewTagBuilder("nav", children...)
+func Nav(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("nav", children...)
 }
 
-func Section(children ...HTML) *TagBuilder {
-	return NewTagBuilder("section", children...)
+func Section(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("section", children...)
 }
 
-func Search(children ...HTML) *TagBuilder {
-	return NewTagBuilder("search", children...)
+func Search(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("search", children...)
 }
 
-func Blockquote(children ...HTML) *TagBuilder {
-	return NewTagBuilder("blockquote", children...)
+func Blockquote(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("blockquote", children...)
 }
 
-func Dd(children ...HTML) *TagBuilder {
-	return NewTagBuilder("dd", children...)
+func Dd(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("dd", children...)
 }
 
-func Dl(children ...HTML) *TagBuilder {
-	return NewTagBuilder("dl", children...)
+func Dl(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("dl", children...)
 }
 
-func Dt(children ...HTML) *TagBuilder {
-	return NewTagBuilder("dt", children...)
+func Dt(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("dt", children...)
 }
 
-func Figcaption(children ...HTML) *TagBuilder {
-	return NewTagBuilder("figcaption", children...)
+func Figcaption(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("figcaption", children...)
 }
 
-func Figure(children ...HTML) *TagBuilder {
-	return NewTagBuilder("figure", children...)
+func Figure(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("figure", children...)
 }
 
-func Hr() *TagBuilder {
-	return NewTagBuilder("hr").
+func Hr() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("hr").
 		SetSelfClosing()
 }
 
-func Li(children ...HTML) *TagBuilder {
-	return NewTagBuilder("li", children...)
+func Li(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("li", children...)
 }
 
-func Menu(children ...HTML) *TagBuilder {
-	return NewTagBuilder("menu", children...)
+func Menu(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("menu", children...)
 }
 
-func OL(children ...HTML) *TagBuilder {
-	return NewTagBuilder("ol", children...)
+func OL(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("ol", children...)
 }
 
-func P(children ...HTML) *TagBuilder {
-	return NewTagBuilder("p", children...)
+func P(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("p", children...)
 }
 
-func Pre(children ...HTML) *TagBuilder {
-	return NewTagBuilder("pre", children...)
+func Pre(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("pre", children...)
 }
 
-func Ul(children ...HTML) *TagBuilder {
-	return NewTagBuilder("ul", children...)
+func Ul(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("ul", children...)
 }
 
-func Abbr(children ...HTML) *TagBuilder {
-	return NewTagBuilder("abbr", children...)
+func Abbr(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("abbr", children...)
 }
 
-func B(children ...HTML) *TagBuilder {
-	return NewTagBuilder("b", children...)
+func B(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("b", children...)
 }
 
-func Bdi(children ...HTML) *TagBuilder {
-	return NewTagBuilder("bdi", children...)
+func Bdi(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("bdi", children...)
 }
 
-func Bdo(children ...HTML) *TagBuilder {
-	return NewTagBuilder("bdo", children...)
+func Bdo(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("bdo", children...)
 }
 
-func Br() *TagBuilder {
-	return NewTagBuilder("br").
+func Br() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("br").
 		SetSelfClosing()
 }
 
-func Cite(children ...HTML) *TagBuilder {
-	return NewTagBuilder("cite", children...)
+func Cite(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("cite", children...)
 }
 
-func Code(children ...HTML) *TagBuilder {
-	return NewTagBuilder("code", children...)
+func Code(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("code", children...)
 }
 
-func Data(children ...HTML) *TagBuilder {
-	return NewTagBuilder("data", children...)
+func Data(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("data", children...)
 }
 
-func Dfn(children ...HTML) *TagBuilder {
-	return NewTagBuilder("dfn", children...)
+func Dfn(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("dfn", children...)
 }
 
-func Em(children ...HTML) *TagBuilder {
-	return NewTagBuilder("em", children...)
+func Em(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("em", children...)
 }
 
-func I(children ...HTML) *TagBuilder {
-	return NewTagBuilder("i", children...)
+func I(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("i", children...)
 }
 
-func Kbd(children ...HTML) *TagBuilder {
-	return NewTagBuilder("kbd", children...)
+func Kbd(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("kbd", children...)
 }
 
-func Mark(children ...HTML) *TagBuilder {
-	return NewTagBuilder("mark", children...)
+func Mark(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("mark", children...)
 }
 
-func Q(children ...HTML) *TagBuilder {
-	return NewTagBuilder("q", children...)
+func Q(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("q", children...)
 }
 
-func Rb(children ...HTML) *TagBuilder {
-	return NewTagBuilder("rb", children...)
+func Rb(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("rb", children...)
 }
 
-func Rp(children ...HTML) *TagBuilder {
-	return NewTagBuilder("rp", children...)
+func Rp(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("rp", children...)
 }
 
-func Rt(children ...HTML) *TagBuilder {
-	return NewTagBuilder("rt", children...)
+func Rt(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("rt", children...)
 }
 
-func Ruby(children ...HTML) *TagBuilder {
-	return NewTagBuilder("ruby", children...)
+func Ruby(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("ruby", children...)
 }
 
-func S(children ...HTML) *TagBuilder {
-	return NewTagBuilder("s", children...)
+func S(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("s", children...)
 }
 
-func Samp(children ...HTML) *TagBuilder {
-	return NewTagBuilder("samp", children...)
+func Samp(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("samp", children...)
 }
 
-func Small(children ...HTML) *TagBuilder {
-	return NewTagBuilder("small", children...)
+func Small(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("small", children...)
 }
 
-func Span(children ...HTML) *TagBuilder {
-	return NewTagBuilder("span", children...)
+func Span(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("span", children...)
 }
 
-func Strong(children ...HTML) *TagBuilder {
-	return NewTagBuilder("strong", children...)
+func Strong(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("strong", children...)
 }
 
-func Sub(children ...HTML) *TagBuilder {
-	return NewTagBuilder("sub", children...)
+func Sub(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("sub", children...)
 }
 
-func Time(children ...HTML) *TagBuilder {
-	return NewTagBuilder("time", children...)
+func Time(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("time", children...)
 }
 
-func U(children ...HTML) *TagBuilder {
-	return NewTagBuilder("u", children...)
+func U(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("u", children...)
 }
 
-func Var(children ...HTML) *TagBuilder {
-	return NewTagBuilder("var", children...)
+func Var(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("var", children...)
 }
 
-func Wbr() *TagBuilder {
-	return NewTagBuilder("wbr").
+func Wbr() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("wbr").
 		SetSelfClosing()
 }
 
-func Area() *TagBuilder {
-	return NewTagBuilder("area").
+func Area() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("area").
 		SetSelfClosing()
 }
 
-func Audio(children ...HTML) *TagBuilder {
-	return NewTagBuilder("audio", children...)
+func Audio(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("audio", children...)
 }
 
-func Img() *TagBuilder {
-	return NewTagBuilder("img").
+func Img() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("img").
 		SetSelfClosing()
 }
 
-func Map(children ...HTML) *TagBuilder {
-	return NewTagBuilder("map", children...)
+func Map(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("map", children...)
 }
 
-func Track() *TagBuilder {
-	return NewTagBuilder("track").
+func Track() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("track").
 		SetSelfClosing()
 }
 
-func Video(children ...HTML) *TagBuilder {
-	return NewTagBuilder("video", children...)
+func Video(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("video", children...)
 }
 
-func Embed() *TagBuilder {
-	return NewTagBuilder("embed").
+func Embed() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("embed").
 		SetSelfClosing()
 }
 
-func Iframe() *TagBuilder {
-	return NewTagBuilder("iframe").
+func Iframe() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("iframe").
 		SetSelfClosing()
 }
 
-func Object() *TagBuilder {
-	return NewTagBuilder("object").
+func Object() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("object").
 		SetSelfClosing()
 }
 
-func Picture(children ...HTML) *TagBuilder {
-	return NewTagBuilder("picture", children...)
+func Picture(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("picture", children...)
 }
 
-func Source() *TagBuilder {
-	return NewTagBuilder("source").
+func Source() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("source").
 		SetSelfClosing()
 }
 
-func Svg(children ...HTML) *TagBuilder {
-	return NewTagBuilder("svg", children...)
+func Svg(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("svg", children...)
 }
 
-func Math(children ...HTML) *TagBuilder {
-	return NewTagBuilder("math", children...)
+func Math(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("math", children...)
 }
 
-func Canvas() *TagBuilder {
-	return NewTagBuilder("canvas")
+func Canvas() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("canvas")
 }
 
-func Noscript(children ...HTML) *TagBuilder {
-	return NewTagBuilder("noscript", children...)
+func Noscript(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("noscript", children...)
 }
 
-func Script(children ...HTML) *TagBuilder {
-	return NewTagBuilder("script", children...)
+func Script(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("script", children...)
 }
 
-func Del(children ...HTML) *TagBuilder {
-	return NewTagBuilder("del", children...)
+func Del(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("del", children...)
 }
 
-func Ins(children ...HTML) *TagBuilder {
-	return NewTagBuilder("ins", children...)
+func Ins(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("ins", children...)
 }
 
-func Caption(children ...HTML) *TagBuilder {
-	return NewTagBuilder("caption", children...)
+func Caption(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("caption", children...)
 }
 
-func Col() *TagBuilder {
-	return NewTagBuilder("col").
+func Col() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("col").
 		SetSelfClosing()
 }
 
-func Colgroup(children ...HTML) *TagBuilder {
-	return NewTagBuilder("colgroup", children...)
+func Colgroup(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("colgroup", children...)
 }
 
-func Table(children ...HTML) *TagBuilder {
-	return NewTagBuilder("table", children...)
+func Table(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("table", children...)
 }
 
-func Tbody(children ...HTML) *TagBuilder {
-	return NewTagBuilder("tbody", children...)
+func Tbody(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("tbody", children...)
 }
 
-func Td(children ...HTML) *TagBuilder {
-	return NewTagBuilder("td", children...)
+func Td(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("td", children...)
 }
 
-func Tfoot(children ...HTML) *TagBuilder {
-	return NewTagBuilder("tfoot", children...)
+func Tfoot(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("tfoot", children...)
 }
 
-func Th(children ...HTML) *TagBuilder {
-	return NewTagBuilder("th", children...)
+func Th(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("th", children...)
 }
 
-func Thead(children ...HTML) *TagBuilder {
-	return NewTagBuilder("thead", children...)
+func Thead(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("thead", children...)
 }
 
-func Tr(children ...HTML) *TagBuilder {
-	return NewTagBuilder("tr", children...)
+func Tr(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("tr", children...)
 }
 
-func Datalist(children ...HTML) *TagBuilder {
-	return NewTagBuilder("datalist", children...)
+func Datalist(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("datalist", children...)
 }
 
-func Fieldset(children ...HTML) *TagBuilder {
-	return NewTagBuilder("fieldset", children...)
+func Fieldset(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("fieldset", children...)
 }
 
-func Form(children ...HTML) *TagBuilder {
-	return NewTagBuilder("form", children...)
+func Form(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("form", children...)
 }
 
-func Label(children ...HTML) *TagBuilder {
-	return NewTagBuilder("label", children...)
+func Label(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("label", children...)
 }
 
-func Legend(children ...HTML) *TagBuilder {
-	return NewTagBuilder("legend", children...)
+func Legend(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("legend", children...)
 }
 
-func Meter(children ...HTML) *TagBuilder {
-	return NewTagBuilder("meter", children...)
+func Meter(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("meter", children...)
 }
 
-func Optgroup(children ...HTML) *TagBuilder {
-	return NewTagBuilder("optgroup", children...)
+func Optgroup(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("optgroup", children...)
 }
 
-func Option(label string) *TagBuilder {
-	return NewTagBuilder("option", Text(label))
+func Option(label string) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("option", Text(label))
 }
 
-func Output(children ...HTML) *TagBuilder {
-	return NewTagBuilder("output", children...)
+func Output(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("output", children...)
 }
 
-func Progress(children ...HTML) *TagBuilder {
-	return NewTagBuilder("progress", children...)
+func Progress(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("progress", children...)
 }
 
-func Select(children ...HTML) *TagBuilder {
-	return NewTagBuilder("select", children...)
+func Select(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("select", children...)
 }
 
-func Textarea(content string) *TagBuilder {
-	return NewTagBuilder("textarea", Text(content))
+func Textarea(content string) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("textarea", Text(content))
 }
 
-func Details(children ...HTML) *TagBuilder {
-	return NewTagBuilder("details", children...)
+func Details(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("details", children...)
 }
 
-func Dialog(children ...HTML) *TagBuilder {
-	return NewTagBuilder("dialog", children...)
+func Dialog(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("dialog", children...)
 }
 
-func Summary(children ...HTML) *TagBuilder {
-	return NewTagBuilder("summary", children...)
+func Summary(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("summary", children...)
 }
 
-func Slot() *TagBuilder {
-	return NewTagBuilder("slot")
+func Slot() *DefaultTagBuilder {
+	return NewDefaultTagBuilder("slot")
 }
 
-func Template(children ...HTML) *TagBuilder {
-	return NewTagBuilder("template", children...)
+func Template(children ...HTML) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("template", children...)
 }

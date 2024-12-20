@@ -1,14 +1,32 @@
 package h
 
-type TagBuilder struct {
+import "unsafe"
+
+type TagBuilder[T any] struct {
 	Tag *Tag
 }
 
-func NewTagBuilder(
+type DefaultTagBuilder struct {
+	TagBuilder[DefaultTagBuilder]
+}
+
+func NewDefaultTagBuilder(
 	name string,
 	children ...HTML,
-) *TagBuilder {
-	return &TagBuilder{
+) *DefaultTagBuilder {
+	return &DefaultTagBuilder{
+		TagBuilder: NewTagBuilder[DefaultTagBuilder](
+			name,
+			children...,
+		),
+	}
+}
+
+func NewTagBuilder[T any](
+	name string,
+	children ...HTML,
+) TagBuilder[T] {
+	return TagBuilder[T]{
 		Tag: &Tag{
 			Name:     name,
 			Children: children,
@@ -16,59 +34,66 @@ func NewTagBuilder(
 	}
 }
 
-func (t *TagBuilder) Build() *Tag {
+func (t *TagBuilder[T]) Build() *Tag {
 	return t.Tag
 }
 
-func (t *TagBuilder) SetSelfClosing() *TagBuilder {
+func (t *TagBuilder[T]) SetSelfClosing() *T {
 	t.Tag.SelfClosing = true
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Render(c *HTMLContext) {
+func (t *TagBuilder[T]) Render(c *HTMLContext) {
 	t.Tag.Render(c)
 }
 
-func (t *TagBuilder) Child(children ...HTML) *TagBuilder {
+func (t *TagBuilder[T]) Child(children ...HTML) *T {
 	t.Tag.Children = append(t.Tag.Children, children...)
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Children(children []HTML) *TagBuilder {
+func (t *TagBuilder[T]) Children(children []HTML) *T {
 	t.Tag.Children = append(t.Tag.Children, children...)
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) If(condition bool, fun func(*TagBuilder),
-) *TagBuilder {
+func (t *TagBuilder[T]) If(condition bool, fun func(*T)) *T {
+	o := t.AsT()
 	if condition {
-		fun(t)
+		fun(o)
 	}
-	return t
+	return o
 }
 
-func (t *TagBuilder) IfElse(condition bool, fun func(*TagBuilder),
-	elseFun func(*TagBuilder),
-) *TagBuilder {
+func (t *TagBuilder[T]) AsT() *T {
+	return (*T)(unsafe.Pointer(t))
+}
+
+func (t *TagBuilder[T]) IfElse(condition bool, fun func(*T),
+	elseFun func(*T),
+) *T {
+	o := t.AsT()
 	if condition {
-		fun(t)
+		fun(o)
 	} else {
-		elseFun(t)
+		elseFun(o)
 	}
-	return t
+	return o
 }
 
-func (t *TagBuilder) ForEach(values []string, fun func(*TagBuilder, string),
-) *TagBuilder {
+func (t *TagBuilder[T]) ForEach(values []string, fun func(*T, string),
+) *T {
+	o := t.AsT()
 	for _, value := range values {
-		fun(t, value)
+		fun(o, value)
 	}
-	return t
+	return o
 }
 
-func (t *TagBuilder) With(fun ...func(*TagBuilder)) *TagBuilder {
+func (t *TagBuilder[T]) With(fun ...func(*T)) *T {
+	o := t.AsT()
 	for _, f := range fun {
-		f(t)
+		f(o)
 	}
-	return t
+	return o
 }

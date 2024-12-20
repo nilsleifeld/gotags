@@ -1,261 +1,261 @@
 package h
 
-func (t *TagBuilder) Attr(name, value string) *TagBuilder {
+func (t *TagBuilder[T]) Attr(name, value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute(name, value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Lang(value string) *TagBuilder {
+func (t *TagBuilder[T]) Lang(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("lang", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Id(value string) *TagBuilder {
+func (t *TagBuilder[T]) Id(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("id", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Class(value string) *TagBuilder {
+func (t *TagBuilder[T]) Class(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("class", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Style(value string) *TagBuilder {
+func (t *TagBuilder[T]) Style(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("style", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Src(value string) *TagBuilder {
+func (t *TagBuilder[T]) Src(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("src", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Href(value string) *TagBuilder {
+func (t *TagBuilder[T]) Href(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("href", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Charset(value string) *TagBuilder {
+func (t *TagBuilder[T]) Charset(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("charset", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Name(value string) *TagBuilder {
+func (t *TagBuilder[T]) Name(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("name", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Value(value string) *TagBuilder {
+func (t *TagBuilder[T]) Value(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("value", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Type(value string) *TagBuilder {
+func (t *TagBuilder[T]) Type(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("type", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Placeholder(value string) *TagBuilder {
+func (t *TagBuilder[T]) Placeholder(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("placeholder", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Disabled() *TagBuilder {
+func (t *TagBuilder[T]) Disabled() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("disabled", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Selected() *TagBuilder {
+func (t *TagBuilder[T]) Selected() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("selected", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Required() *TagBuilder {
+func (t *TagBuilder[T]) Required() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("required", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Pattern(value string) *TagBuilder {
+func (t *TagBuilder[T]) Pattern(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("pattern", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Min(value string) *TagBuilder {
+func (t *TagBuilder[T]) Min(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("min", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Max(value string) *TagBuilder {
+func (t *TagBuilder[T]) Max(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("max", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Step(value string) *TagBuilder {
+func (t *TagBuilder[T]) Step(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("step", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Target(value string) *TagBuilder {
+func (t *TagBuilder[T]) Target(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("target", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Rel(value string) *TagBuilder {
+func (t *TagBuilder[T]) Rel(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("rel", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Alt(value string) *TagBuilder {
+func (t *TagBuilder[T]) Alt(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("alt", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Title(value string) *TagBuilder {
+func (t *TagBuilder[T]) Title(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("title", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) For(value string) *TagBuilder {
+func (t *TagBuilder[T]) For(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("for", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Method(value string) *TagBuilder {
+func (t *TagBuilder[T]) Method(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("method", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Action(value string) *TagBuilder {
+func (t *TagBuilder[T]) Action(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("action", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Accept(value string) *TagBuilder {
+func (t *TagBuilder[T]) Accept(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("accept", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Autocomplete(value string) *TagBuilder {
+func (t *TagBuilder[T]) Autocomplete(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("autocomplete", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Autoplay() *TagBuilder {
+func (t *TagBuilder[T]) Autoplay() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("autoplay", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Controls() *TagBuilder {
+func (t *TagBuilder[T]) Controls() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("controls", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Loop() *TagBuilder {
+func (t *TagBuilder[T]) Loop() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("loop", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Media(value string) *TagBuilder {
+func (t *TagBuilder[T]) Media(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("media", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Defer() *TagBuilder {
+func (t *TagBuilder[T]) Defer() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("defer", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Rowspan(value string) *TagBuilder {
+func (t *TagBuilder[T]) Rowspan(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("rowspan", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Colspan(value string) *TagBuilder {
+func (t *TagBuilder[T]) Colspan(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("colspan", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Headers(value string) *TagBuilder {
+func (t *TagBuilder[T]) Headers(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("headers", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Scope(value string) *TagBuilder {
+func (t *TagBuilder[T]) Scope(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("scope", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Async() *TagBuilder {
+func (t *TagBuilder[T]) Async() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("async", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Integrity(value string) *TagBuilder {
+func (t *TagBuilder[T]) Integrity(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("integrity", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Crossorigin(value string) *TagBuilder {
+func (t *TagBuilder[T]) Crossorigin(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("crossorigin", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Download() *TagBuilder {
+func (t *TagBuilder[T]) Download() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("download", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Datalist(value string) *TagBuilder {
+func (t *TagBuilder[T]) Datalist(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("datalist", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Enctype(value string) *TagBuilder {
+func (t *TagBuilder[T]) Enctype(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("enctype", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Novalidate() *TagBuilder {
+func (t *TagBuilder[T]) Novalidate() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("novalidate", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Formaction(value string) *TagBuilder {
+func (t *TagBuilder[T]) Formaction(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("formaction", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Formmethod(value string) *TagBuilder {
+func (t *TagBuilder[T]) Formmethod(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("formmethod", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Formnovalidate() *TagBuilder {
+func (t *TagBuilder[T]) Formnovalidate() *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("formnovalidate", ""))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Formtarget(value string) *TagBuilder {
+func (t *TagBuilder[T]) Formtarget(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("formtarget", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Ping(value string) *TagBuilder {
+func (t *TagBuilder[T]) Ping(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("ping", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Inputmode(value string) *TagBuilder {
+func (t *TagBuilder[T]) Inputmode(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("inputmode", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Content(value string) *TagBuilder {
+func (t *TagBuilder[T]) Content(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("content", value))
-	return t
+	return t.AsT()
 }
 
-func (t *TagBuilder) Slot(value string) *TagBuilder {
+func (t *TagBuilder[T]) Slot(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("slot", value))
-	return t
+	return t.AsT()
 }
