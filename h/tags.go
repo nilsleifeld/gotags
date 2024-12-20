@@ -51,8 +51,8 @@ func Style(children ...HTML) *DefaultTagBuilder {
 	return NewDefaultTagBuilder("style", children...)
 }
 
-func Title(children ...HTML) *DefaultTagBuilder {
-	return NewDefaultTagBuilder("title", children...)
+func Title(value string) *DefaultTagBuilder {
+	return NewDefaultTagBuilder("title", Text(value))
 }
 
 func A(children ...HTML) *DefaultTagBuilder {
