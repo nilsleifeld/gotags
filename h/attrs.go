@@ -259,3 +259,8 @@ func (t *TagBuilder[T]) Slot(value string) *T {
 	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("slot", value))
 	return t.AsT()
 }
+
+func (t *TagBuilder[T]) Checked() *T {
+	t.Tag.Attrs = append(t.Tag.Attrs, NewAttribute("checked", ""))
+	return t.AsT()
+}
